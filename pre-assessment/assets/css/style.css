@@ -1,0 +1,120 @@
+* {
+  margin: 0px;
+  padding: 0px;
+} /* This rule targets all of the HTML and sets the default margin and padding to 0 */
+body {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-color: #171717;
+  background-image: url("../img/bg-tile.jpg");
+  background-repeat: repeat-x;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+#container {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#header {
+  background-image: url("../img/assessment-1-opt.jpg");
+  height: 140px;
+}
+#header h1 a {
+  display: block;
+  height: 140px;
+}
+#nav {
+  background-color: #000;
+}
+#nav ul {
+  list-style-type: none;
+  margin-left: 10px;
+}
+#nav ul li {
+  display: inline;
+  height: 35px;
+  line-height: 35px;
+}
+#nav ul li a {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+#nav ul li a:link,
+#nav ul li a:visited {
+  text-decoration: none;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: #000;
+  color: #fff;
+}
+#nav ul li a:hover {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+#content {
+  margin: 20px;
+}
+.alert {
+  background-color: #0e022a;
+  color: #d9271d;
+}
+#content p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+#content h2 {
+  border-left: 5px solid;
+  padding-left: 0.5rem;
+  color: #d9271d;
+}
+#content h3 {
+  border-left: 5px solid;
+  padding-left: 0.5rem;
+  color: #d9271d;
+  border-radius: 1rem;
+}
+#content h4 {
+  border-left: 2px solid;
+  padding-left: 0.5rem;
+  color: #d9271d;
+}
+dl {
+  margin-bottom: 1rem;
+}
+#footer {
+  background-color: #000;
+  color: #fff;
+  height: 25px;
+}
+#footer h6 {
+  font-size: 12px;
+  line-height: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.fav-site {
+  transition: 0.3s;
+}
+.fav-site:hover {
+  background-color: #0e022a;
+  color: #fff;
+}
+.content-img-right {
+  float: right;
+  border: 5px solid;
+  margin: 1rem;
+}
