@@ -65,10 +65,37 @@ li a:hover {
   color: #015958;
 }
 
+#widget {
+  display: flex;
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+#widget h2 {
+  margin-bottom: 0;
+}
+
 footer {
   position: fixed;
   bottom: 2vh;
   right: 2vw;
   color: #015958;
   font-size: 2rem;
+}
+
+@media (max-width: 960px) {
+  ul {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  ul li {
+    margin-right: 0;
+    margin-top: 3rem;
+  }
+  ul li a {
+    padding-top: 1rem;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
 }
