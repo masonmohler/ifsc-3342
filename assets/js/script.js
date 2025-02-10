@@ -1,8 +1,24 @@
-document.onload(getWeather());
+window.onload = getLocationAndWeather();
 
-async function getWeather() {
-  const url =
-    "https://api.open-meteo.com/v1/forecast?latitude=34.7209728&longitude=-92.3271168&hourly=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto";
+async function getLocationAndWeather() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        getWeather(latitude, longitude);
+      },
+      (error) => {
+        console.error("Error getting location:", error);
+      }
+    );
+  } else {
+    console.error("Geolocation is not supported by this browser.");
+  }
+}
+
+async function getWeather(latitude, longitude) {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto`;
 
   try {
     const response = await fetch(url);
