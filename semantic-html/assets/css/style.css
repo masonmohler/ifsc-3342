@@ -1,0 +1,32 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+  font-family: "Barlow", serif;
+}
+
+/*  --------------- Global Styles -----------------  */
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-left: 0;
+  list-style-type: none;
+}
