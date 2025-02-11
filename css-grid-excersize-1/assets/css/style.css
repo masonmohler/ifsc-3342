@@ -1,0 +1,103 @@
+/*  --------------- Box Sizing -----------------  */
+
+html {
+  box-sizing: border-box;
+  background-color: #060a05;
+  color: #e4f2e3;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*  --------------- Utility Classes -----------------  */
+
+.container {
+  width: 80vw;
+  max-width: 960px;
+  margin: 40px auto;
+  font-family: "Barlow", serif;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "primary secondary"
+    "footer footer";
+  gap: 2rem;
+}
+
+/*  --------------- Global Styles -----------------  */
+.hero {
+  grid-area: header;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style-type: none;
+  border-top: 5px solid #4aa14b;
+  border-bottom: 5px solid #4aa14b;
+  padding: 0.5rem;
+}
+
+.hero nav ul li a {
+  color: #e4f2e3;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  transition: 0.4s;
+}
+
+.hero nav ul li a:hover {
+  background-color: #4aa14b;
+}
+
+#primary {
+  grid-area: primary;
+  padding: 1rem;
+}
+
+.post {
+  margin-bottom: 2rem;
+}
+
+.post h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post h1 a {
+  color: #e4f2e3;
+}
+
+.post time {
+  float: right;
+}
+
+#secondary {
+  grid-area: secondary;
+  padding: 0.5rem;
+  border-left: 5px solid #4aa14b;
+  background-color: #4aa14b30;
+}
+
+#colophon {
+  grid-area: footer;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer a {
+  color: #e4f2e3;
+}
