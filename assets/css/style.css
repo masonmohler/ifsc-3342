@@ -83,7 +83,7 @@ footer {
   font-size: 2rem;
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 800px) {
   ul {
     flex-direction: column;
     margin-top: 0;
@@ -97,5 +97,21 @@ footer {
   }
   h2 {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  .container {
+    background: linear-gradient(-25deg, #fff 25%, #59081e 25%);
+    background-attachment: fixed;
+  }
+  li a {
+    background-color: #3d0514;
+  }
+  li a:hover {
+    color: #59081e;
+  }
+  footer {
+    color: #59081e;
   }
 }

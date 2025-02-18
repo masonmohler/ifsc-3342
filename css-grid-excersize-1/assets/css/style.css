@@ -101,3 +101,14 @@ footer p {
 footer a {
   color: #e4f2e3;
 }
+
+@media (max-width: 960px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "primary"
+      "secondary"
+      "footer";
+  }
+}
