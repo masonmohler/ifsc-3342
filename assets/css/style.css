@@ -1,3 +1,11 @@
+/*  --------------- Custom Properties -----------------  */
+:root {
+  --background-gradient: linear-gradient(-25deg, #fff 25%, #015958 25%);
+  --background-color: #015958;
+  --background-color-dark: #023535;
+  --text-color: #fff;
+}
+
 /*  --------------- Box Sizing -----------------  */
 
 html {
@@ -16,7 +24,7 @@ html {
   max-width: 960px;
   margin: 40px auto;
   overflow: hidden;
-  background: linear-gradient(-25deg, #fff 25%, #015958 25%);
+  background: var(--background-gradient);
   background-attachment: fixed;
 }
 
@@ -25,8 +33,8 @@ body {
   font-family: "Ubuntu", serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #015958;
-  color: #fff;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 h1 {
@@ -56,13 +64,13 @@ li a {
   text-decoration: none;
   padding: 1rem;
   transition: 0.4s ease-in-out;
-  background-color: #023535;
+  background-color: var(--background-color-dark);
   border-radius: 0.5rem;
 }
 
 li a:hover {
-  background-color: #fff;
-  color: #015958;
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
 #widget {
@@ -85,7 +93,7 @@ footer {
 @media screen and (max-width: 800px) {
   .container {
     background: none;
-    background-color: #015958;
+    background-color: var(--background-color);
     overflow: scroll;
   }
   ul li a {
@@ -93,7 +101,7 @@ footer {
   }
   footer {
     position: static;
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
     font-size: 1.4rem;
   }

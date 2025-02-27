@@ -6,3 +6,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  font-family: "Figtree", sans-serif;
+}
