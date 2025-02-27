@@ -42,13 +42,13 @@ h2 {
 ul {
   list-style-type: none;
   padding-left: 0;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 ul li {
   font-size: 1.2rem;
-  margin-right: 1rem;
+  margin-bottom: 3rem;
 }
 
 li a {
@@ -67,7 +67,6 @@ li a:hover {
 
 #widget {
   display: flex;
-  margin-top: 4rem;
   flex-direction: column;
 }
 
@@ -84,19 +83,19 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-  ul {
-    flex-direction: column;
-    margin-top: 0;
-  }
-  ul li {
-    margin-right: 0;
-    margin-top: 3rem;
+  .container {
+    background: none;
+    background-color: #015958;
+    overflow: scroll;
   }
   ul li a {
     padding-top: 1rem;
   }
-  h2 {
-    margin-bottom: 0;
+  footer {
+    position: static;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
   }
 }
 
