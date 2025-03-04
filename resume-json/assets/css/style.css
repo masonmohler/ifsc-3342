@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #0b7272;
+  --action-color: #d85227;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -8,132 +13,68 @@ html {
 }
 
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
   color: #333;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
+
+img {
+  max-width: 100%;
+}
+
+/*-- Utility Classes --*/
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin: 20px 40px;
+  padding: 0 20px;
+  justify-self: center;
+  background: #fff;
 }
 
-/* Navigation */
-nav.primary ul {
-  list-style: none;
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*-- Navigation --*/
+
+.primary {
+  justify-items: center;
+}
+
+.primary ul {
+  list-style-type: none;
+  padding-left: 0;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
+  flex-direction: row;
+  gap: 1rem;
 }
 
-nav.primary ul li a {
+.primary ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  padding: 0.25rem;
+  transition: 0.3s ease-in-out;
+  font-size: 18px;
 }
 
-/* Typography */
-h1, h2, h3 {
-  color: #222;
-  margin-bottom: 10px;
+.primary ul li a:hover {
+  border-bottom: 4px solid var(--action-color);
 }
 
+/*-- Personal Details --*/
 .page-title {
   text-align: center;
-}
-
-/* About Section */
-.bio {
-  text-align: center;
-}
-
-.bio img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
-}
-
-dl.details dt {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.related-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-.related-links a {
-  text-decoration: none;
-  color: #0077cc;
-}
-
-/* Skills */
-#skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  list-style: none;
-}
-
-.skill {
-  background: #0077cc;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-/* Experience */
-.job {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Styles */
-@media (min-width: 600px) {
-  nav.primary ul {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .details {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 900px) {
-  .bio {
-    display: flex;
-    align-items: center;
-    text-align: left;
-  }
-
-  .bio img {
-    margin-right: 20px;
-  }
 }
