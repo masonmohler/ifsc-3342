@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/d8bee0805f.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -117,10 +121,7 @@
       <section id="about">
         <h2 class="visually-hidden">Personal Details</h2>
         <div class="bio">
-          <img
-            src="https://placehold.co/600x600?text=Headshot"
-            alt="Mason Mohler"
-          />
+          <img src="assets/img/square-headshot.jpeg" alt="Mason Mohler" />
           <p>
             I specialize in aesthetic web design and writing clean, efficient,
             and maintainable code. People are much more likely to interact with
@@ -160,37 +161,45 @@
         </dl>
         <ul class="related-links">
           <li>
-            <a target="_blank" href="https://github.com/masonmohler">github</a>
+            <a target="_blank" href="https://github.com/masonmohler"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </li>
           <li>
             <a target="_blank" href="https://www.linkedin.com/in/mason-mohler/"
-              >linkedin</a
-            >
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </li>
-          <li><a href="resume.pdf" download>pdf resume</a></li>
+          <li>
+            <a href="assets/docs/Resume - Mason Mohler.pdf" download
+              ><i class="fa-solid fa-file-arrow-down"></i
+            ></a>
+          </li>
         </ul>
       </section>
       <section id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li class="skill">HTML</li>
-          <li class="skill">CSS</li>
-          <li class="skill">JavaScript</li>
-          <li class="skill">JQuery</li>
-          <li class="skill">Node.js</li>
-          <li class="skill">Express.js</li>
-          <li class="skill">PostgreSQL</li>
-          <li class="skill">Adobe Product Suite</li>
-          <li class="skill">Version Control</li>
-          <li class="skill">Soft Skills</li>
-        </ul>
+        <div class="scroll-container">
+          <ul class="scroll-list">
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">JQuery</li>
+            <li class="skill">Node.js</li>
+            <li class="skill">Express.js</li>
+            <li class="skill">PostgreSQL</li>
+            <li class="skill">Adobe Product Suite</li>
+            <li class="skill">Version Control</li>
+            <li class="skill">Soft Skills</li>
+          </ul>
+        </div>
       </section>
       <section id="experience">
         <h2>Experience</h2>
         <article class="job">
           <h3>Asset Recovery Specialist</h3>
           <div>
-            <span>Malco Motors</span>
+            <span>Malco Motors</span> <br />
             <span>August 2022 - Present</span>
             <p>
               Responsibilities: Implementing skip tracing techniques to track
@@ -208,8 +217,6 @@
           <h3>Service Department Manager</h3>
           <span>
             <span>Malco Motors</span>
-            <a href="http://malcomotors.com">Company URL</a>
-            <span>Arkansas, USA</span>
           </span>
           <div>
             <span>June 2020</span> -
@@ -221,6 +228,8 @@
             appointment schedule, and maintaining accurate records of all
             department operations
           </p>
+          <a href="http://malcomotors.com">Company URL</a>
+          <span>Arkansas, USA</span>
         </article>
       </section>
       <section id="education">
@@ -241,5 +250,6 @@
         &copy; 2025 Mason Mohler | <a href="#top">Back to Top</a>
       </div>
     </footer>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
