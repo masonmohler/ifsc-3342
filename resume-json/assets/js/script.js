@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     list.appendChild(clone);
   });
 
-  let scrollSpeed = .2; // Adjust scrolling speed
+  let scrollSpeed = 1; // Adjust scrolling speed
   let listWidth = list.scrollWidth / 2; // Get width of one full set of items
 
   function scrollLoop() {
