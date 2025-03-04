@@ -65,7 +65,6 @@ img {
   border-bottom: 4px solid var(--primary-color);
   padding: 0.25rem;
   transition: 0.3s ease-in-out;
-  font-size: 1.2em;
 }
 
 .primary ul li a:hover {
