@@ -1,6 +1,8 @@
 :root {
   --primary-color: #0b7272;
   --action-color: #d85227;
+  --text-color: #064444;
+  --background-color: #fff;
 }
 
 html {
@@ -15,8 +17,7 @@ html {
 body {
   font-family: "Figtree", sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
 }
@@ -32,7 +33,7 @@ img {
   margin: 20px 40px;
   padding: 0 20px;
   justify-self: center;
-  background: #fff;
+  color: var(--text-color);
 }
 
 .visually-hidden {
@@ -77,4 +78,29 @@ img {
 /*-- Personal Details --*/
 .page-title {
   text-align: center;
+  font-size: 48px;
+  margin: 10px;
+}
+
+.bio {
+  line-height: 1.8rem;
+  color: var(--text-color);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.details dt {
+  text-align: left;
+}
+
+.details dd {
+  text-align: right;
 }
