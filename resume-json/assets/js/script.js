@@ -3,26 +3,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = Array.from(list.children);
 
   // Duplicate items to create a seamless effect
-  items.forEach((item) => {
-    let clone = item.cloneNode(true);
-    list.appendChild(clone);
+  items.forEach(item => {
+      let clone = item.cloneNode(true);
+      list.appendChild(clone);
   });
 
-  let scrollSpeed = 1; // Adjust scrolling speed
+  let scrollSpeed = 30; // Pixels per second (consistent across devices)
   let listWidth = list.scrollWidth / 2; // Get width of one full set of items
+  let scrollPosition = 0;
+  let lastTimestamp = null;
 
-  function scrollLoop() {
-    list.style.transform = `translateX(${-scrollPosition}px)`;
-    scrollPosition += scrollSpeed;
+  function scrollLoop(timestamp) {
+      if (!lastTimestamp) {
+          lastTimestamp = timestamp;
+      }
 
-    // Reset position for infinite effect
-    if (scrollPosition >= listWidth) {
-      scrollPosition = 0;
-    }
+      // Calculate the time difference
+      let deltaTime = (timestamp - lastTimestamp) / 1000; // Convert to seconds
+      lastTimestamp = timestamp;
 
-    requestAnimationFrame(scrollLoop);
+      // Move based on time elapsed
+      scrollPosition += scrollSpeed * deltaTime;
+
+      // Reset position for infinite effect
+      if (scrollPosition >= listWidth) {
+          scrollPosition = 0;
+      }
+
+      list.style.transform = `translateX(${-scrollPosition}px)`;
+
+      requestAnimationFrame(scrollLoop);
   }
 
-  let scrollPosition = 0;
-  scrollLoop();
+  requestAnimationFrame(scrollLoop);
 });
