@@ -231,3 +231,48 @@ img {
 #copyright a {
   color: var(--action-color);
 }
+
+/* -- Media Queries -- */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+  .primary ul {
+    justify-content: space-around;
+  }
+  .primary ul li a {
+    font-size: 21px;
+  }
+  .page-title {
+    font-size: 48px;
+  }
+  .bio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .details {
+    grid-area: details;
+  }
+  .related-links {
+    flex-direction: column;
+    margin: 1rem auto;
+    grid-area: links;
+    text-align: center;
+  }
+  .related-links i {
+    font-size: 4rem;
+  }
+  .contact {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "links details";
+  }
+  .ee {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
