@@ -244,7 +244,11 @@ img {
     font-size: 21px;
   }
   .page-title {
+    margin-top: 2rem;
     font-size: 48px;
+  }
+  h2 {
+    font-size: 36px;
   }
   .bio {
     display: grid;
@@ -254,6 +258,9 @@ img {
   }
   .details {
     grid-area: details;
+  }
+  .skill {
+    font-size: 18px;
   }
   .related-links {
     flex-direction: column;
