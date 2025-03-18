@@ -250,6 +250,10 @@ img {
   h2 {
     font-size: 36px;
   }
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
   .bio {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -281,5 +285,31 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+  .primary ul li a {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .page-title {
+    margin-top: 2rem;
+    font-size: 56px;
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+  }
+  .contact {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 24px;
   }
 }
