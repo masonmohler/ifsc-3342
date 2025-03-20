@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const noJS = document.querySelector(".no-js");
+  noJS.remove();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelector(".scroll-list");
   const items = Array.from(list.children);
 
@@ -38,12 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(scrollLoop);
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
     });
+  });
 });
