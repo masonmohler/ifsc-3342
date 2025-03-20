@@ -144,25 +144,12 @@ img {
   width: 100%;
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    white 15%,
-    white 95%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    white 15%,
-    white 95%,
-    transparent
-  );
 }
 
 /* Scrolling list */
 .scroll-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   list-style: none;
   padding: 0;
@@ -232,6 +219,13 @@ img {
   color: var(--action-color);
 }
 
+.no-js {
+  justify-content: space-around;
+}
+.no-js li a {
+  font-size: 1.2rem;
+}
+
 /* -- Media Queries -- */
 @media screen and (min-width: 768px) {
   .container {
@@ -294,6 +288,9 @@ img {
 @media screen and (min-width: 992px) {
   .container {
     max-width: 1200px;
+  }
+  .scroll-list {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .primary ul li a {
     font-size: 28px;

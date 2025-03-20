@@ -5,7 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.querySelector(".scroll-list");
+  const listContainer = document.querySelector(".scroll-container");
   const items = Array.from(list.children);
+
+  list.style.display = "flex";
+  listContainer.style.maskImage =
+    "linear-gradient(to right,transparent,white 15%,white 95%,transparent)";
 
   // Duplicate items
   items.forEach((item) => {
