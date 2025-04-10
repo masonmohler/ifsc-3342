@@ -17,6 +17,35 @@
   background-color: #d272ff;
 }
 
-.nav-link {
-  color: white !important;
+.hero-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-link {
+    color: white !important;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    color: #ddd !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    background-image: url("../img/holding-hands.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  /* Hide the img on mobile view */
+  .hero-img {
+    display: none !important;
+  }
 }
