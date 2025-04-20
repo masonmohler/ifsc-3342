@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Demo</title>
+  </head>
+  <body>
+    <section>
+      <picture>
+        <source srcset="assets/img/dog-1400.jpg" media="(min-width: 1400px)" />
+        <source srcset="assets/img/dog-1200.jpg" media="(min-width: 1200px)" />
+        <source srcset="assets/img/dog-850.jpg" media="(min-width: 850px)" />
+        <img srcset="assets/img/dog-500.jpg" />
+      </picture>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+  </body>
+</html>
