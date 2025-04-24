@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mason Mohler" />
+    <meta
+      name="description"
+      content="Website for Lupus Foundation of Arkansas"
+    />
+    <title>Lupus Foundation of Arkansas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!--    Made by Erik Terwan    -->
+      <!--   24th of November 2015   -->
+      <!--        MIT License        -->
+      <nav role="navigation">
+        <h2 class="hide-on-desktop">Lupus Foundation of Arkansas</h2>
+        <div id="menuToggle">
+          <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+          <input type="checkbox" id="menuCheckbox" />
+
+          <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+          <ul id="menu">
+            <h2 class="hide-on-mobile">Lupus Foundation of Arkansas</h2>
+            <!-- 
+        We can use a label here to close upon click (when doing same page navigation), this
+        does require a slight bit of JS.
+        -->
+            <li>
+              <a href="#">
+                <label for="menuCheckbox" onclick="this.parentNode.click();"
+                  >Home</label
+                >
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <label for="menuCheckbox" onclick="this.parentNode.click();"
+                  >Our Mission</label
+                >
+              </a>
+            </li>
+
+            <!-- These just close the menu -->
+            <li>
+              <label for="menuCheckbox"><a>Events</a></label>
+            </li>
+            <li>
+              <label for="menuCheckbox"><a>Volunteer</a></label>
+            </li>
+
+            <!-- Or just use regular URLs -->
+            <li>
+              <label for="menuCheckbox"
+                ><a class="CTA" href="" target="_blank">Donate Now</a></label
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
