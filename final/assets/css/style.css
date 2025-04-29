@@ -29,6 +29,18 @@ header {
   background-color: var(--action-color);
 }
 
+.main-nav {
+  height: 125px;
+  justify-content: center;
+  align-content: center;
+}
+
+.main-nav h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 30px;
+}
+
 .CTA {
   background-color: var(--bg-color);
   color: var(--action-color) !important;
@@ -41,10 +53,60 @@ header {
   color: var(--bg-color) !important;
 }
 
-main {
-  width: calc(100% - 240px);
-  max-width: 680px;
-  margin: 100px auto;
+.container {
+  height: 70vh;
+  background-image: url("../img/holding-hands.jpg");
+  background-position: 40% 60%;
+  background-size: cover;
+}
+
+.hero {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  height: 70vh;
+  position: absolute;
+}
+
+.hero h1 {
+  font-family: "Kite One", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--bg-color);
+  margin: 0;
+  padding: 1rem;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+.cta-buttons {
+  position: absolute;
+  bottom: 25vh;
+  right: 2rem;
+}
+
+.cta-buttons a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+.cta-buttons a:hover {
+  box-shadow: inset var(--bg-color) 300px 0 0 0;
+  color: var(--secondary-color);
+}
+
+.main-donate {
+  background-color: var(--action-color);
+}
+
+.main-volunteer {
+  background-color: #82449885;
+  margin-right: 1rem;
 }
 
 p {
@@ -64,9 +126,7 @@ p {
   position: fixed;
   top: 50px;
   right: 50px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
@@ -182,7 +242,8 @@ p {
 
 #menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 #menu li label {
@@ -204,7 +265,7 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hide-on-mobile {
     display: initial;
   }
