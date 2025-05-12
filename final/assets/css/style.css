@@ -205,18 +205,16 @@ p {
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .volunteer-form button:hover {
-    box-shadow: inset var(--secondary-color) 800px 0 0 0;
-
+  box-shadow: inset var(--secondary-color) 800px 0 0 0;
 }
 
 footer {
-  padding: 1rem 1.4rem;
-  justify-self: center;
-  background-color: var(--action-color);
+  padding: 1.4rem 1.4rem;
+  background-color: var(--secondary-color);
   color: var(--bg-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
