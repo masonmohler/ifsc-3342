@@ -6,17 +6,6 @@
   --text-color: #232323;
 }
 
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
-
 body {
   margin: 0;
   padding: 0;
@@ -37,7 +26,7 @@ header {
 
 .main-nav h2 {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin: 0 30px;
 }
 
@@ -54,22 +43,27 @@ header {
 }
 
 .container {
-  height: 70vh;
+  height: 75vh;
   background-image: url("../img/holding-hands.jpg");
   background-position: 40% 60%;
   background-size: cover;
 }
 
+.main-container {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+
 .hero {
   width: calc(100% - 50px);
   margin: 0 auto;
-  height: 70vh;
+  height: 75vh;
   position: absolute;
 }
 
 .hero h1 {
   font-family: "Kite One", sans-serif;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 400;
   color: var(--bg-color);
   margin: 0;
@@ -82,14 +76,14 @@ header {
 
 .cta-buttons {
   position: absolute;
-  bottom: 25vh;
+  bottom: 20vh;
   right: 2rem;
 }
 
 .cta-buttons a {
   text-decoration: none;
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--bg-color);
   border-radius: 1rem;
   transition: 0.5s;
@@ -118,23 +112,170 @@ p {
   scroll-behavior: smooth;
 }
 
+.section-heading {
+  font-size: 2.4rem;
+  font-family: "Kite One", sans-serif;
+  color: var(--secondary-color);
+  font-weight: 300;
+}
+
+#ourmission {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-card {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  border: 5px solid var(--secondary-color);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fa-solid {
+  font-size: 2rem;
+  justify-self: center;
+  color: var(--secondary-color);
+}
+
+.mission-card p {
+  padding: 0.5rem;
+}
+
+.event-title {
+  font-size: 1.2rem;
+}
+
+.carousel-cell {
+  border: 5px solid var(--secondary-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.event-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.flickity-button {
+  display: none;
+}
+
+#volunteer {
+  margin-top: 4rem;
+}
+
+.volunteer-form {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.volunteer-form label {
+  width: 96%;
+}
+
+.volunteer-form label input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.volunteer-form label select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.volunteer-form label textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.volunteer-form button {
+  padding: 0.75rem;
+  width: 100%;
+  background-color: var(--action-color);
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  transition: .5s;
+}
+
+.volunteer-form button:hover {
+    box-shadow: inset var(--secondary-color) 800px 0 0 0;
+
+}
+
+footer {
+  padding: 1rem 1.4rem;
+  justify-self: center;
+  background-color: var(--action-color);
+  color: var(--bg-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer a {
+  color: var(--bg-color);
+}
+
+footer h3 {
+  grid-column: 1 / 2;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-column: 2 / 3;
+  text-align: right;
+}
+
+.footer-copy {
+  grid-column: 1 / 3;
+  font-size: 1rem;
+  justify-self: center;
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
 /* Menu code starts here */
 
 #menuToggle {
   display: block;
   /* You can also use relative/absolute here if you want to stay on the top */
   position: fixed;
-  top: 50px;
+  top: 40px;
   right: 50px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
+  background-color: var(--action-color);
+  padding: 0.5rem;
+  padding-top: 0.75rem;
+  border-radius: 0.75rem;
 }
 
 #menuToggle a {
   text-decoration: none;
   color: var(--bg-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
   padding: 1rem;
   transition: 0.6s;

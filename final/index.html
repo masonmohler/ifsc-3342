@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kite+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body id="top">
@@ -59,7 +63,7 @@
               </a>
             </li>
             <li>
-              <a href="#about">
+              <a href="#ourmission">
                 <label for="menuCheckbox" onclick="this.parentNode.click();"
                   >Our Mission</label
                 >
@@ -93,6 +97,152 @@
         <a href="" class="main-donate">Donate Now</a>
       </section>
     </section>
+    <main class="main-container">
+      <section id="about">
+        <h2 class="section-heading">About Us</h2>
+        <p>
+          The Lupus Foundation of Arkansas, Inc. is a 501c3 nonprofit
+          organization originally based in Hot Springs using volunteers since
+          October 1993 to bring public awareness for the cause of lupus
+          throughout the state of Arkansas. Headquartered in Little Rock, we
+          serve communities throughout Arkansas through education, support,
+          outreach, and advocacy. We believe that no one should face lupus
+          alone, and we are here to ensure every Arkansan touched by the disease
+          has access to the resources, care, and support they need.
+        </p>
+      </section>
+      <section id="ourmission">
+        <h2 class="section-heading">Our Mission</h2>
+        <div class="mission-card">
+          <i class="fa-solid fa-house-medical"></i>
+          <p>
+            Supporting patients, families, and caregivers through every stage of
+            their journey.
+          </p>
+        </div>
+        <div class="mission-card">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>
+            Providing reliable information and resources to those living with
+            the disease.
+          </p>
+        </div>
+        <div class="mission-card">
+          <i class="fa-solid fa-user-doctor"></i>
+          <p>
+            Collaborating with medical professionals and researchers to improve
+            treatment and outcomes
+          </p>
+        </div>
+      </section>
+      <section id="events">
+        <h2 class="section-heading">Events</h2>
+        <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-cell">
+            <img class="event-img" src="https://placehold.co/600x400" alt="" />
+            <h3 class="event-title">8th Annual Statewide Talent Show</h3>
+            <p>
+              Join us for an evening of unforgettable performances as talented
+              Arkansans showcase their skills in music, dance, comedy, and
+              more—all in support of lupus awareness.
+            </p>
+            <a
+              href="https://ticketscandy.com/e/8th-annual-statewide-talent-show-9662"
+              >Check it Out</a
+            >
+          </div>
+          <div class="carousel-cell">
+            <img class="event-img" src="https://placehold.co/600x400" alt="" />
+            <h3 class="event-title">Annual Jazz Concert</h3>
+            <p>
+              Enjoy a soulful night of live jazz featuring local artists and
+              smooth rhythms, raising funds and awareness for lupus support
+              across Arkansas.
+            </p>
+            <a
+              href="https://ticketscandy.com/e/8th-annual-statewide-talent-show-9662"
+              >Check it Out</a
+            >
+          </div>
+          <div class="carousel-cell">
+            <img class="event-img" src="https://placehold.co/600x400" alt="" />
+            <h3 class="event-title">2025 Health and Wellness Fair</h3>
+            <p>
+              Explore health resources, free screenings, wellness tips, and
+              community support—all in one place. Join us to learn, connect, and
+              take steps toward a healthier life while supporting those affected
+              by lupus.
+            </p>
+            <a
+              href="https://ticketscandy.com/e/8th-annual-statewide-talent-show-9662"
+              >Check it Out</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="volunteer">
+        <h2 class="section-heading">Volunteer with Us</h2>
+        <p>
+          Ready to make a difference? Fill out the form below to let us know
+          you're interested in volunteering with the Lupus Foundation of
+          Arkansas.
+        </p>
+        <form class="volunteer-form" action="/volunteer-submit" method="POST">
+          <label>
+            Full Name:
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Email Address:
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            Phone Number:
+            <input type="tel" name="phone" />
+          </label>
+
+          <label>
+            Areas of Interest:
+            <select name="interests">
+              <option value="">Select an option</option>
+              <option value="event_support">Event Support</option>
+              <option value="office_assistance">Office Assistance</option>
+              <option value="community_outreach">Community Outreach</option>
+              <option value="peer_support">Peer Support</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>
+            Message:
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Tell us more about why you'd like to volunteer!"
+            ></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <h3>Lupus Foundation of Arkansas, Inc.</h3>
+      <nav class="footer-nav">
+        <a href="#ourmission">Our Mission</a>
+        <a href="#events">Events</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#top">Back to Top</a>
+      </nav>
+      <p class="footer-copy">
+        &copy; 2025 Lupus Foundation of Arkansas
+      </p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/d8bee0805f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
