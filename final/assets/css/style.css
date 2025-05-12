@@ -220,10 +220,12 @@ p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
   transition: 0.5s;
+  box-shadow: none;
 }
 
 .volunteer-form button:hover {
   background-color: var(--secondary-color);
+  box-shadow: none;
 }
 
 footer {
