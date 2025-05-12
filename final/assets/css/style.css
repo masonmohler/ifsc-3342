@@ -1,4 +1,3 @@
-/*  Theme  */
 :root {
   --action-color: #d272ff;
   --secondary-color: #824498;
@@ -319,14 +318,11 @@ footer h3 {
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  right: -5px;
-
+  top: 0px;
+  right: 0px;
   cursor: pointer;
-
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-
   -webkit-touch-callout: none;
 }
 
@@ -425,6 +421,26 @@ footer h3 {
 
 .hide-on-mobile {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .flickity-button {
+    display: initial;
+  }
+  .event-title {
+    font-size: 1.6rem;
+  }
+  .mission-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-items: space-evenly;
+  }
+  .mission-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
